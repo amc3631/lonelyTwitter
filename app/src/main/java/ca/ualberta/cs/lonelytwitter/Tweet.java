@@ -13,7 +13,7 @@ public abstract class Tweet implements Tweetable {
     //Empty argument constructor with default values
     Tweet() {
         //Must use the 'this' keyword in order to specify the current object message = message does nothing!
-        List<String> emotions = new ArrayList<String>();
+        List<CurrentMood> emotions = new ArrayList<CurrentMood>();
         this.date = new Date();
         this.message = "I am default message schwa!";
     }
@@ -25,7 +25,7 @@ public abstract class Tweet implements Tweetable {
         this.message = message;
     }
 
-    public void addEmotion(String emotion){
+    public void addEmotion(CurrentMood emotion){
         emotions.add(emotion);
     }
 
