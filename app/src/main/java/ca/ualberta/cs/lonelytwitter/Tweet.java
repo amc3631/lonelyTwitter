@@ -33,16 +33,24 @@ public abstract class Tweet implements Tweetable {
         return this.message;
     }
 
-    public void setMessage(String message) throws TweetTooLongException {
+    public void setMessage(String message) throws MaxTextLength {
         if (message.length() <= this.MAX_CHARS ) {
             this.message = message;
         } else {
-            throw new TweetTooLongException();
+            throw new MaxTextLength();
         }
     }
 
     public Date getDate() { return this.date; }
 
+    public void setDate(Date date){
+        this.date = date;
+    }
     //No method body implemented! We leave that up to the subclasses (they MUST implement it)
     public abstract Boolean isImportant();
+
+    public String toString(){
+        return this.date.toString()+"|" +this.message;
+    }
+
 }

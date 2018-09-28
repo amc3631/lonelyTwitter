@@ -20,7 +20,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-}
 
-dependencies {
-    implementation 'com.google.code.gson:gson:2.8.2'}
+    dependencies {
+        implementation 'com.google.code.gson:gson:2.8.2'}
+}
